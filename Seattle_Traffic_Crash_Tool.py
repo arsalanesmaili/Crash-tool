@@ -1,3 +1,21 @@
+import sys
+import subprocess
+
+# Function to install a package
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+# Install necessary libraries
+install("streamlit")
+install("pandas")
+install("geopandas")
+install("shapely")
+install("matplotlib")
+install("contextily")
+install("folium")
+install("streamlit-folium")
+install("seaborn")
+install("numpy<2")
 # import libraries
 import streamlit as st
 import pandas as pd
@@ -33,7 +51,7 @@ geometry = [Point(xy) for xy in zip(df['x'], df['y'])]
 crash_gdf = gpd.GeoDataFrame(df, geometry=geometry, crs="EPSG:2926")
 progress_bar.progress(75)
 progress_text.text('Preparing Visualizations... 75%')
-merged_gdf = gpd.sjoin(crash_gdf, seattle_gdf, how="inner", op="within")
+merged_gdf = gpd.sjoin(crash_gdf, seattle_gdf, how="inner", predicate="within")
 end_time = time.time()
 progress_bar.progress(100)
 progress_text.text('Data Loaded and Processed Successfully')
