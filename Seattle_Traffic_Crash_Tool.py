@@ -32,6 +32,7 @@ import time
 from pathlib import Path
 # Streamlit app
 st.title('Interactive Environment for Seattle Traffic Crashes')
+BASE_DIR = Path(__file__).resolve().parent
 # loading datasets
 start_time = time.time()
 progress_bar = st.sidebar.progress(0)
