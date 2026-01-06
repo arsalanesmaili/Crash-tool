@@ -1,21 +1,21 @@
-import sys
-import subprocess
+# import sys
+# import subprocess
 
 # Function to install a package
-def install(package):
-    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+# def install(package):
+#    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
 
 # Install necessary libraries
-install("streamlit")
-install("pandas")
-install("geopandas")
-install("shapely")
-install("matplotlib")
-install("contextily")
-install("folium")
-install("streamlit-folium")
-install("seaborn")
-install("numpy<2")
+# install("streamlit")
+# install("pandas")
+# install("geopandas")
+# install("shapely")
+# install("matplotlib")
+# install("contextily")
+# install("folium")
+# install("streamlit-folium")
+# install("seaborn")
+# install("numpy<2")
 # import libraries
 import streamlit as st
 import pandas as pd
