@@ -33,6 +33,9 @@ from pathlib import Path
 # Streamlit app
 st.title('Interactive Environment for Seattle Traffic Crashes')
 BASE_DIR = Path(__file__).resolve().parent
+st.write("BASE_DIR:", BASE_DIR)
+st.write("CSV exists:", (BASE_DIR / "final_df1.csv").exists())
+st.write("SHP exists:", (BASE_DIR / "tract20_king_county1.shp").exists())
 # loading datasets
 start_time = time.time()
 progress_bar = st.sidebar.progress(0)
