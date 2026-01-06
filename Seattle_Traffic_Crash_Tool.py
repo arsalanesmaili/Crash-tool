@@ -29,7 +29,7 @@ from folium.plugins import HeatMap
 from streamlit_folium import folium_static
 import seaborn as sns
 import time
-
+from pathlib import Path
 # Streamlit app
 st.title('Interactive Environment for Seattle Traffic Crashes')
 # loading datasets
